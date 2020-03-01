@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # Ignore the movie dataset
-movies-dataset/
 .DS_Store
+movies-dataset/
