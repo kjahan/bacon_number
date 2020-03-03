@@ -6,13 +6,17 @@ dependencies:
   - attrs=19.3.0
   - backcall=0.1.0
   - blas=1.0
+  - bleach=3.1.0
   - ca-certificates=2020.1.1
   - certifi=2019.11.28
+  - click=7.0
   - dbus=1.13.12
   - decorator=4.4.1
   - defusedxml=0.6.0
   - entrypoints=0.3
   - expat=2.2.6
+  - flask=1.1.1
+  - flask-cors=3.0.8
   - gettext=0.19.8.1
   - glib=2.63.1
   - icu=58.2
@@ -22,6 +26,7 @@ dependencies:
   - ipython=7.12.0
   - ipython_genutils=0.2.0
   - ipywidgets=7.5.1
+  - itsdangerous=1.1.0
   - jedi=0.16.0
   - jinja2=2.11.1
   - jpeg=9b
@@ -70,6 +75,7 @@ dependencies:
   - python=3.7.6
   - python-dateutil=2.8.1
   - pytz=2019.3
+  - pyyaml=5.3
   - pyzmq=18.1.1
   - qt=5.9.7
   - qtconsole=4.6.0
@@ -86,11 +92,13 @@ dependencies:
   - traitlets=4.3.3
   - wcwidth=0.1.8
   - webencodings=0.5.1
+  - werkzeug=1.0.0
   - wheel=0.34.2
   - widgetsnbextension=3.5.1
   - xz=5.2.4
+  - yaml=0.1.7
   - zeromq=4.3.1
   - zipp=2.2.0
   - zlib=1.2.11
-prefix: //anaconda/envs/bacon
+prefix: /anaconda2/envs/bacon
 
