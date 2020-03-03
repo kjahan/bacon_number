@@ -1,15 +1,25 @@
 # six-degrees
 Six degrees of seperation
 
-# Create the environment: 
+## Requirements
+
+# Clone the code:
+
+`git clone https://github.com/kjahan/six-degrees.git`
+
+# Kaggle dataset:
+
+You need to download the Kaggle dataset and store it under the repo folder, unzip it and rename the folder to `movies-dataset`.
+
+# Create Conda environment: 
 
 `conda env create -f environment.yml`
 
-# To activate this environment: 
+# To activate Conda environment: 
 
 `$ conda activate bacon`
 
-# To deactivate an active environment: 
+# To deactivate Conda environment: 
 
 `$ conda deactivate`
 
@@ -17,21 +27,24 @@ Six degrees of seperation
 
 If you encouter `AttributeError: module 'enum' has no attribute 'IntFlag'` on MacOS, simply run `unset PYTHONPATH` command in your terminal.
 
-# Run the movies data pipeline:
+# Running movies data pipeline, unit tests, and start HTTP server:
 
-To extract movies data, constructing the graph, running BFS, computing bacon number, and saving the outcome run: `python -m src.run`
+To run the movies data pipeline you need to switch to where you cloned the repo code. To load and parse movies data, constructing the movie-actor bipartite graph, running BFS to compute bacon numbers, and saving the outcome results to disk: `python -m src.run`.
 
-# Start web server: 
+You need to run the above step before triggering api calls to the server!
 
-Start the web server for running the api to get bacon number: `python -m src.server`
+To run unit tets run `pytest` from the repo root folder.
 
-# Test api server for "Ronald Reagan":
+# Start HTTP server on your local machine: 
 
-Open your browser and test bacon number for "Ronald Reagan". You shold get bacon number of two.
+Start the HTTP server for handling the api calls and returning the bacon number: `python -m src.server`
+
+# Test HTTP server for "Ronald Reagan" and "Kevin Bacon":
+
+Open the browser of your choice on your local machine and try the following URL. You shold get bacon number of two.
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Ronald%20Reagan
 
-# Test api server for "Kevin Bacon":
 
 For "Kevin Bacon" you shold get the bacon number of zero.
 
