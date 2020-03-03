@@ -14,7 +14,7 @@ def run_pipeline(actor_name="Kevin Bacon"):
     source_id = g.inv_actors_map[actor_name]
     # get six degrees of separation model starting from Kevin
     print("running BFS...")
-    six_separation_degrees = g.run_bfs(source_id)
+    six_separation_degrees = g.bfs(source_id)
     save_model(six_separation_degrees, "six_degrees.pkl", config["model_folder"])
     save_model(g.inv_actors_map, "inv_actors_map.pkl", config["model_folder"])
 

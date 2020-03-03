@@ -1,6 +1,7 @@
-import re
 import json
 from collections import deque
+
+from src.utilities import cleanup_json
 
 class MovieActorGraph:
     def __init__(self):
@@ -17,18 +18,6 @@ class MovieActorGraph:
         # a map from actors names to their ids
         self.inv_actors_map = {}
 
-    def cleanup_json(self, dirty_json):
-        b = re.sub("{'", '{"', dirty_json)
-        c = re.sub("':", '":', b)
-        d = re.sub(", '", ', "', c)
-        e = re.sub(": '", ': "', d)
-        f = re.sub("', ", '", ', e)
-        h = re.sub("'", '', f)
-        i = re.sub('}', '"}', h)
-        j = re.sub(r': ([a-zA-Z\s]+), ', r': "\1", ', i)
-        k = re.sub(r' None"', r' null', j)
-        return k
-
     def construc_inverse_maps(self):
         self.inv_actors_map = {v: k for k, v in self.actors_map.items()}
         self.inv_movies_map = {v: k for k, v in self.movies_map.items()}
@@ -43,7 +32,7 @@ class MovieActorGraph:
                 self.movies_map[movie_id] = movie_title
             dirty_json = row['cast']
             try:
-                dirty_json = self.cleanup_json(dirty_json)
+                dirty_json = cleanup_json(dirty_json)
                 cast_data = json.loads(dirty_json)
                 for cast in cast_data:
                     actor_name = cast['name']
@@ -67,7 +56,7 @@ class MovieActorGraph:
         print("Parsed credist: {}, errors: {}".format(cnt, errors))
         self.construc_inverse_maps()
 
-    def run_bfs(self, source_id):
+    def bfs(self, source_id):
         _debug_ = False
         q = deque()
         q.append(source_id)
