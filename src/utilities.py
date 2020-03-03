@@ -1,5 +1,6 @@
 import yaml
 import pickle
+import re
 
 def setup():
     """
@@ -20,3 +21,15 @@ def load_model(filename, model_folder):
     with open(model_fn, 'rb') as fp:
         six_separation_degrees = pickle.load(fp)
     return six_separation_degrees
+
+def cleanup_json(dirty_json):
+    b = re.sub("{'", '{"', dirty_json)
+    c = re.sub("':", '":', b)
+    d = re.sub(", '", ', "', c)
+    e = re.sub(": '", ': "', d)
+    f = re.sub("', ", '", ', e)
+    h = re.sub("'", '', f)
+    i = re.sub('}', '"}', h)
+    j = re.sub(r': ([a-zA-Z\s]+), ', r': "\1", ', i)
+    k = re.sub(r' None"', r' null', j)
+    return k
