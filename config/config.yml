@@ -1,0 +1,5 @@
+data_folder: movies-dataset/
+model_folder: models/
+movies_metadata_fn: movies_metadata.csv
+credits_fn: credits.csv
+links_fn: links.csv
