@@ -12,7 +12,7 @@ def run_pipeline(actor_name="Kevin Bacon"):
     g.construct_graph(movies_data)
     # get actor id and run BFS from his node
     source_id = g.inv_actors_map[actor_name]
-    # get siz degrees of separation model starting from Kevin
+    # get six degrees of separation model starting from Kevin
     print("running BFS...")
     six_separation_degrees = g.run_bfs(source_id)
     save_model(six_separation_degrees, "six_degrees.pkl", config["model_folder"])
