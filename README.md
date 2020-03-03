@@ -25,6 +25,6 @@ Six degrees of seperation
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Ronald%20Reagan
 
-# Try "Kevin Bacon" with the API endpoint and you shold get bacon number of 0 :)
+## Try "Kevin Bacon" with the API endpoint and you shold get bacon number of 0 :)
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Kevin%20Bacon
