@@ -13,18 +13,26 @@ Six degrees of seperation
 
 `$ conda deactivate`
 
-## If you encouter `AttributeError: module 'enum' has no attribute 'IntFlag'` on MacOS, simply run `unset PYTHONPATH` command in your terminal.
+# MacOS Python issue: 
 
-# Run the movies data pipeline for running BFS, computing bacon number and saving the outcome:
+If you encouter `AttributeError: module 'enum' has no attribute 'IntFlag'` on MacOS, simply run `unset PYTHONPATH` command in your terminal.
 
-`python -m src.run`
+# Run the movies data pipeline:
 
-# Run the web server which servers the api for returning bacon number: `python -m src.server`
+To extract movies data, constructing the graph, running BFS, computing bacon number, and saving the outcome run: `python -m src.run`
 
-# Open your browser to test the api end point as follows for "Ronal Ragan", we shold get bacon number of 2 :)
+# Start web server: 
+
+Start the web server for running the api to get bacon number: `python -m src.server`
+
+# Test api server for "Ronal Ragan":
+
+Open your browser and test bacon number for "Ronal Ragan". You shold get bacon number of 2 :)
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Ronald%20Reagan
 
-# Try "Kevin Bacon" with the API endpoint and you shold get bacon number of 0 :)
+# Test api server for "Kevin Bacon":
+
+For "Kevin Bacon" you shold get the bacon number of 0 :)
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Kevin%20Bacon
