@@ -67,7 +67,7 @@ class MovieActorGraph:
         print("Parsed credist: {}, errors: {}".format(cnt, errors))
         self.construc_inverse_maps()
 
-    def run_bfs(self, source_id):
+    def bfs(self, source_id):
         _debug_ = False
         q = deque()
         q.append(source_id)
