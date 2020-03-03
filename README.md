@@ -25,14 +25,14 @@ To extract movies data, constructing the graph, running BFS, computing bacon num
 
 Start the web server for running the api to get bacon number: `python -m src.server`
 
-# Test api server for "Ronal Ragan":
+# Test api server for "Ronald Reagan":
 
-Open your browser and test bacon number for "Ronal Ragan". You shold get bacon number of 2 :)
+Open your browser and test bacon number for "Ronald Reagan". You shold get bacon number of two.
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Ronald%20Reagan
 
 # Test api server for "Kevin Bacon":
 
-For "Kevin Bacon" you shold get the bacon number of 0 :)
+For "Kevin Bacon" you shold get the bacon number of zero.
 
 http://127.0.0.1:5001/api/v1/baconnumber?actorname=Kevin%20Bacon
