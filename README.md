@@ -45,7 +45,7 @@ Start the HTTP server for handling the api calls and returning the bacon number:
 
 To test the HTTP server for "Ronald Reagan" and "Kevin Bacon", open the browser of your choice on your machine and try the following URLs. You shold get bacon number of two for "Ronald Reagan" and zero for "Kevin Bacon".
 
-![Ronald's Bacon Number](http://127.0.0.1:5001/api/v1/baconnumber?actorname=Ronald%20Reagan)
+[Ronald's Bacon Number](http://127.0.0.1:5001/api/v1/baconnumber?actorname=Ronald%20Reagan)
 
 
-![Kevin's Bacon Number](http://127.0.0.1:5001/api/v1/baconnumber?actorname=Kevin%20Bacon)
+[Kevin's Bacon Number](http://127.0.0.1:5001/api/v1/baconnumber?actorname=Kevin%20Bacon)
