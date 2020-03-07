@@ -1,5 +1,7 @@
+![Bacon Number](https://marlomarketing.com/wp-content/uploads/2012/03/kevin-bacon-six-degrees-590x350.jpg)
+
 # six-degrees
-Six degrees of seperation
+[Six Degrees of Kevin Bacon](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon)
 
 # Requirements
 
@@ -9,7 +11,7 @@ Six degrees of seperation
 
 ## Download Kaggle dataset:
 
-You need to download the Kaggle dataset and store it under the repo folder, unzip it and rename the folder to `movies-dataset`.
+You should download [The Movies Dataset](https://www.kaggle.com/rounakbanik/the-movies-dataset) and store it locally under the repo folder. Unzip the dataset file and rename its folder to `movies-dataset`.
 
 ## Create Conda environment: 
 
