@@ -39,4 +39,4 @@ def process(base_folder, movies_metadata_fn, credits_fn):
         raise RuntimeError
     # Let's join the two dataset based on movie id
     merged = pd.merge(metadata, credits, on='id')
-    return merged 
+    return merged
