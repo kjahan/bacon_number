@@ -1,6 +1,6 @@
 ![Bacon Number](https://marlomarketing.com/wp-content/uploads/2012/03/kevin-bacon-six-degrees-590x350.jpg)
 
-# six-degrees
+# Six degrees of Kevin Bacon 
 [Six Degrees of Kevin Bacon](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon)
 
 # Requirements
